@@ -43,7 +43,7 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
     body {
       margin: 0; font-family: "Nunito", system-ui, sans-serif; color: var(--ink);
       background: #fff; line-height: 1.6; font-size: 17px; -webkit-font-smoothing: antialiased;
@@ -90,11 +90,10 @@
     .btn svg { width: 20px; height: 20px; flex: none; }
 
     /* Marca */
-    .brand { display: inline-flex; align-items: flex-end; gap: 6px; text-decoration: none; color: var(--teal); line-height: 1; }
-    .brand-text { display: flex; flex-direction: column; }
-    .brand-text small { font-family: "Caveat", cursive; font-size: 1.15rem; color: var(--ink); font-weight: 700; margin-bottom: -2px; }
-    .brand-text strong { font-family: "Fredoka", sans-serif; font-size: 2.3rem; font-weight: 700; letter-spacing: -.03em; }
-    .brand .inf { width: 58px; height: 30px; margin-bottom: 4px; }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; line-height: 0; }
+    .brand img { height: 72px; width: auto; }
+    .brand-card { background: #fff; border-radius: 20px; padding: 12px 18px; }
+    .brand-card img { height: 78px; }
 
     /* Encabezado */
     .site-header {
@@ -103,7 +102,7 @@
       transition: box-shadow .2s ease;
     }
     .site-header.scrolled { box-shadow: 0 6px 24px rgba(14, 60, 70, .08); }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 16px; }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 84px; gap: 16px; }
     .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
     .nav-links a {
       display: block; padding: 8px 13px; border-radius: 999px; color: var(--ink);
@@ -151,8 +150,10 @@
       position: absolute; height: auto; border-radius: 50%; object-fit: cover; border: 6px solid #fff; box-shadow: var(--shadow);
     }
     .collage .b1 { width: 30%; aspect-ratio: 1; left: -2%; bottom: 4%; }
-    .collage .b2 { width: 24%; aspect-ratio: 1; right: 0; top: 0; }
-    .collage .b3 { width: 25%; aspect-ratio: 1; right: 4%; bottom: 0; }
+    .collage .icon-bubble { display: grid; place-items: center; color: #fff; }
+    .collage .icon-bubble .ico { width: 44%; height: 44%; }
+    .collage .b2 { width: 19%; aspect-ratio: 1; right: 2%; top: 2%; }
+    .collage .b3 { width: 17%; aspect-ratio: 1; right: 6%; bottom: 6%; }
     .collage .ring { position: absolute; border-radius: 50%; border: 3px dashed var(--teal); opacity: .35; inset: 0 2% 6% 4%; }
     .collage .heart { position: absolute; }
     .collage .note {
@@ -255,10 +256,14 @@
     /* Actividades */
     .act-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: center; }
     .act-photos { position: relative; aspect-ratio: 1; max-width: 420px; width: 100%; margin-inline: auto; }
-    .act-photos img { position: absolute; border-radius: 50%; object-fit: cover; border: 7px solid #fff; box-shadow: var(--shadow); aspect-ratio: 1; height: auto; }
-    .act-photos .p1 { width: 58%; left: 0; top: 4%; }
-    .act-photos .p2 { width: 46%; right: 0; top: 30%; }
-    .act-photos .p3 { width: 42%; left: 18%; bottom: 0; }
+    .act-photos .blob { position: absolute; inset: 8%; background: var(--orange-soft); border-radius: 42% 58% 55% 45% / 50% 45% 55% 50%; }
+    .act-photos .ib { position: absolute; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; color: #fff; border: 6px solid #fff; box-shadow: var(--shadow); }
+    .act-photos .ib .ico { width: 46%; height: 46%; stroke-width: 1.8; }
+    .act-photos .i1 { width: 34%; left: 8%; top: 12%; }
+    .act-photos .i2 { width: 26%; left: 46%; top: 30%; }
+    .act-photos .i3 { width: 30%; left: 14%; bottom: 14%; }
+    .act-photos .i4 { width: 22%; right: 8%; bottom: 22%; }
+    .act-photos .i5 { width: 20%; left: 48%; bottom: 6%; }
     .act-photos .free {
       position: absolute; right: 6%; top: 2%; background: var(--orange); color: #fff; border-radius: 50%;
       width: 108px; height: 108px; display: grid; place-items: center; text-align: center;
@@ -351,8 +356,7 @@
     footer { background: var(--teal-deep); color: #CFE7E9; padding: 40px 0 28px; position: relative; margin-top: 90px; }
     footer .wave.top { top: -89px; transform: none; }
     .foot { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 36px; }
-    footer .brand { color: #fff; margin-bottom: 14px; }
-    footer .brand-text small { color: #CFE7E9; }
+    footer .brand { margin-bottom: 18px; }
     footer h4 { font-family: "Fredoka", sans-serif; color: #fff; font-weight: 600; font-size: 1.1rem; margin: 0 0 14px; }
     footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
     footer a { color: #fff; text-decoration: none; font-weight: 700; }
@@ -400,7 +404,7 @@
     @media (max-width: 920px) {
       .menu-toggle { display: block; }
       .nav-links {
-        position: absolute; top: 76px; left: 0; right: 0; flex-direction: column; align-items: stretch; background: #fff;
+        position: absolute; top: 84px; left: 0; right: 0; flex-direction: column; align-items: stretch; background: #fff;
         padding: 12px 16px 20px; border-bottom: 1px solid var(--line); box-shadow: 0 16px 30px rgba(0, 0, 0, .08); display: none;
       }
       .nav-links.open { display: flex; }
@@ -432,7 +436,7 @@
       .price { padding: 14px; gap: 12px; }
       .price-tag { font-size: 1.15rem; padding: 5px 12px; }
       .tests th, .tests td { padding: 12px 6px; }
-      .brand-text strong { font-size: 2rem; }
+      .brand img { height: 60px; }
       .collage .note { font-size: 1.25rem; left: 14%; padding: 10px 16px; }
       .act-photos .free { width: 88px; height: 88px; font-size: .9rem; }
       .motto { padding: 100px 0; }
@@ -505,9 +509,8 @@
 
   <header class="site-header">
     <nav class="container nav" aria-label="Principal">
-      <a class="brand" href="#inicio" aria-label="Fundación Familia C.E.A., inicio">
-        <span class="brand-text"><small>Fundación Familia</small><strong>cea</strong></span>
-        <svg class="inf" aria-hidden="true"><use href="#infinity"/></svg>
+      <a class="brand" href="#inicio">
+        <img src="img/logo.png" alt="Fundación Familia C.E.A. — Inclusión desde el corazón" width="480" height="286">
       </a>
       <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -543,8 +546,8 @@
           <div class="ring"></div>
           <img class="main" src="img/nina.jpg" alt="Niña sonriente con la cara pintada formando un corazón con sus manos" width="1240" height="872">
           <img class="bubble b1 float" src="img/granja.jpg" alt="Niño abrazando a un cabrito en la granja educativa" width="1288" height="596">
-          <img class="bubble b2 float d2" src="img/piscina-pelotas.jpg" alt="Niño jugando en una piscina de pelotas" width="360" height="360">
-          <img class="bubble b3 float" src="img/juegos.jpg" alt="Niños jugando juntos al aire libre" width="368" height="368">
+          <div class="bubble b2 float d2 icon-bubble bg-pink" aria-hidden="true"><svg class="ico"><use href="#heart-line"/></svg></div>
+          <div class="bubble b3 float icon-bubble bg-orange" aria-hidden="true"><svg class="ico"><use href="#sun"/></svg></div>
           <svg class="heart float d2" style="left:6%;top:4%;width:42px;height:42px;color:var(--pink)" aria-hidden="true"><use href="#heart"/></svg>
           <svg class="heart float" style="left:0;top:16%;width:24px;height:24px;color:var(--teal)" aria-hidden="true"><use href="#heart"/></svg>
           <svg class="heart float d2" style="right:30%;top:-2%;width:22px;height:22px;color:var(--orange)" aria-hidden="true"><use href="#heart"/></svg>
@@ -708,10 +711,13 @@
     <!-- ACTIVIDADES -->
     <section id="actividades">
       <div class="container act-layout">
-        <div class="act-photos reveal">
-          <img class="p1" src="img/carita-pintada.jpg" alt="Niña con la cara pintada haciendo el gesto de la paz" width="332" height="332" loading="lazy">
-          <img class="p2" src="img/piscina-pelotas.jpg" alt="Niño jugando en una piscina de pelotas" width="360" height="360" loading="lazy">
-          <img class="p3" src="img/juegos.jpg" alt="Niños jugando juntos al aire libre" width="368" height="368" loading="lazy">
+        <div class="act-photos reveal" aria-hidden="true">
+          <div class="blob"></div>
+          <div class="ib i1 bg-pink float"><svg class="ico"><use href="#balloon"/></svg></div>
+          <div class="ib i2 bg-teal float d2"><svg class="ico"><use href="#tree"/></svg></div>
+          <div class="ib i3 bg-green float d2"><svg class="ico"><use href="#gift"/></svg></div>
+          <div class="ib i4 bg-blue float"><svg class="ico"><use href="#snow"/></svg></div>
+          <div class="ib i5 bg-purple float d2"><svg class="ico"><use href="#palette"/></svg></div>
           <div class="free">¡100%<br>gratis!</div>
         </div>
         <div>
@@ -896,9 +902,8 @@
     <div class="container">
       <div class="foot">
         <div>
-          <a class="brand" href="#inicio">
-            <span class="brand-text"><small>Fundación Familia</small><strong>cea</strong></span>
-            <svg class="inf" aria-hidden="true"><use href="#infinity"/></svg>
+          <a class="brand brand-card" href="#inicio">
+            <img src="img/logo.png" alt="Fundación Familia C.E.A. — Inclusión desde el corazón" width="480" height="286" loading="lazy">
           </a>
           <p>Inclusión desde el corazón. Más que terapias, creamos comunidad y oportunidades.</p>
           <div class="socials">
