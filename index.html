@@ -39,7 +39,7 @@
     "name": "Fundación Familia C.E.A. Chile",
     "alternateName": "Fundación Familia CEA",
     "slogan": "Inclusión desde el corazón",
-    "description": "Organización sin fines de lucro que trabaja por la inclusión y calidad de vida de niños, niñas, adolescentes, jóvenes y adultos con o sin diagnóstico, junto a sus familias.",
+    "description": "Fundación comunitaria sin fines de lucro de La Serena que acompaña a personas autistas, con otras condiciones del neurodesarrollo, y a sus familias, durante todo el ciclo vital, con un enfoque respetuoso, humano y neuroafirmativo.",
     "url": "https://enrrietta.github.io/fundacion-cea/",
     "logo": "https://enrrietta.github.io/fundacion-cea/img/logo.png",
     "image": "https://enrrietta.github.io/fundacion-cea/img/og-image.jpg",
@@ -499,6 +499,95 @@
       .float, .wa-float::before { animation: none; }
     }
 
+    /* Servicios como botones */
+    button.pro { font: inherit; color: inherit; text-align: left; cursor: pointer; width: 100%; }
+    button.pro:hover { border-color: var(--teal); }
+    .pro small { display: block; font-weight: 700; color: var(--teal-dark); font-size: .8rem; }
+
+    /* Valores de la fundación */
+    .values-title { font-size: 1.15rem; color: var(--ink); margin: 6px 0 12px; }
+    .values { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .values li { padding: 7px 14px; border-radius: 999px; font-weight: 800; font-size: .9rem; }
+
+    /* Equipo */
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .person { text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .person .avatar {
+      width: 96px; height: 96px; border-radius: 50%; display: grid; place-items: center; color: #fff;
+      font-family: "Fredoka", sans-serif; font-size: 2rem; font-weight: 600; margin-bottom: 16px;
+      border: 5px solid #fff; box-shadow: var(--shadow-sm); object-fit: cover;
+    }
+    .person h3 { margin-bottom: 4px; }
+    .person .role { color: var(--pink); font-weight: 800; font-size: .9rem; line-height: 1.35; margin-bottom: 12px; }
+    .person p { color: var(--muted); font-size: .95rem; }
+    .person a { margin-top: auto; font-weight: 700; font-size: .85rem; overflow-wrap: anywhere; }
+    .team-sub { text-align: center; color: var(--teal-dark); font-size: 1.4rem; margin: 48px 0 20px; }
+    .team-roles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .team-role { display: flex; gap: 14px; align-items: flex-start; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px; }
+    .team-role .icon { width: 46px; height: 46px; border-radius: 14px; }
+    .team-role .icon .ico { width: 22px; height: 22px; }
+    .team-role strong { display: block; }
+    .team-role span { color: var(--muted); font-size: .94rem; }
+
+    /* Granja ampliada */
+    .farm-tags { list-style: none; padding: 0; }
+    .farm-tags li { background: var(--purple-soft); color: var(--purple); border-radius: 999px; padding: 6px 14px; font-weight: 800; font-size: .86rem; }
+    .farm-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; }
+    .farm-cards .icon { margin-bottom: 16px; }
+    .farm-cards p { color: var(--muted); }
+    .checks { list-style: none; padding: 0; margin: 0 0 22px; display: grid; gap: 8px; }
+    .checks li { position: relative; padding-left: 28px; }
+    .checks li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; background: var(--green-soft); color: var(--green); font-weight: 800; font-size: .8rem; display: grid; place-items: center; margin-top: 3px; }
+
+    /* Frase */
+    .quote { margin: 0 auto; max-width: 900px; position: relative; z-index: 1; }
+    .motto .quote p { font-family: "Fredoka", sans-serif; font-weight: 500; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.35; margin: 0 0 14px; }
+    .motto .quote .quote-strong { font-family: "Caveat", cursive; font-weight: 700; font-size: clamp(2rem, 5vw, 3.2rem); margin: 0; }
+
+    /* Súmate */
+    .join-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .join-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+    .link-btn { background: none; border: 0; padding: 4px 0; font: 800 .92rem "Nunito", sans-serif; color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+    .mini-tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .mini-tags li { background: var(--teal-soft); color: var(--teal-dark); border-radius: 999px; padding: 5px 12px; font-weight: 800; font-size: .85rem; }
+
+    /* Ventana de detalle */
+    .info-dialog {
+      border: 0; border-radius: 26px; padding: 0; width: min(760px, calc(100% - 24px)); max-height: calc(100vh - 40px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .3); color: var(--ink); overflow: auto;
+    }
+    .info-dialog::backdrop { background: rgba(11, 79, 85, .55); backdrop-filter: blur(3px); }
+    .dlg-head { display: flex; gap: 18px; align-items: flex-start; padding: 28px 28px 18px; position: sticky; top: 0; background: #fff; z-index: 1; border-bottom: 1px solid var(--line); }
+    .dlg-head h2 { font-size: 1.6rem; color: var(--ink); margin: 2px 0 6px; padding-right: 30px; }
+    .dlg-head p { margin: 0; color: var(--muted); }
+    .dlg-close { position: absolute; right: 18px; top: 18px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--bg-alt); font-size: 1.5rem; cursor: pointer; color: var(--ink); }
+    .dlg-list { list-style: none; margin: 0; padding: 22px 28px 6px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .dlg-list li { background: var(--bg-alt); border-radius: 16px; padding: 14px 16px; }
+    .dlg-list li strong { display: block; color: var(--teal-dark); }
+    .dlg-list li span { display: block; color: var(--muted); font-size: .93rem; margin-top: 2px; }
+    .dlg-list.compact li { padding: 12px 16px; }
+    .dlg-note { margin: 12px 28px 0; padding: 12px 16px; border-radius: 14px; background: var(--purple-soft); color: var(--purple); font-weight: 700; font-size: .93rem; }
+    .dlg-actions { padding: 20px 28px 28px; }
+
+    @media (max-width: 1060px) {
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .join-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 760px) {
+      .farm-cards, .team-roles { grid-template-columns: 1fr; }
+      .dlg-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .team-grid, .join-grid { grid-template-columns: 1fr; }
+      .dlg-head { padding: 22px 20px 14px; gap: 14px; }
+      .dlg-head .icon { width: 46px; height: 46px; }
+      .dlg-head h2 { font-size: 1.3rem; }
+      .dlg-list { padding: 16px 20px 4px; }
+      .dlg-note { margin: 10px 20px 0; }
+      .dlg-actions { padding: 16px 20px 22px; }
+      .dlg-actions .btn { width: 100%; }
+    }
+
     /* Saltar al contenido */
     .skip {
       position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--ink); color: #fff;
@@ -656,6 +745,15 @@
       <symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
       <symbol id="paw" viewBox="0 0 24 24"><circle cx="6" cy="10" r="2"/><circle cx="10" cy="5.5" r="2"/><circle cx="14" cy="5.5" r="2"/><circle cx="18" cy="10" r="2"/><path d="M12 11c-3 0-6 4.5-6 7 0 1.7 1.3 2.5 3 2.5 1.2 0 2-.5 3-.5s1.8.5 3 .5c1.7 0 3-.8 3-2.5 0-2.5-3-7-6-7z"/></symbol>
       <symbol id="test" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3M7.5 14h9"/></symbol>
+      <symbol id="pencil" viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1zM14 7l3 3"/></symbol>
+      <symbol id="blocks" viewBox="0 0 24 24"><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/><path d="M12 3l4 7H8l4-7z"/></symbol>
+      <symbol id="music" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></symbol>
+      <symbol id="flower" viewBox="0 0 24 24"><circle cx="12" cy="9" r="2.5"/><path d="M12 6.5C12 3 15 3 15 5.5S12 9 12 9M12 6.5C12 3 9 3 9 5.5S12 9 12 9M14.5 9c3.5 0 3.5 3 1 3S12 9 12 9M9.5 9c-3.5 0-3.5 3-1 3S12 9 12 9M12 11.5V21M12 17c-2-2.5-5-2.5-6-1.5M12 19c2-2.5 5-2.5 6-1.5"/></symbol>
+      <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9M12 3C9.5 5.6 8.2 8.6 8.2 12s1.3 6.4 3.8 9"/></symbol>
+      <symbol id="ear" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 3-2 4-3 5.5S14 18 12 19.5 7.5 21 7 18M9.5 9.5a2.5 2.5 0 0 1 5 0c0 1.5-1.5 2-1.5 3"/></symbol>
+      <symbol id="fish" viewBox="0 0 24 24"><path d="M3 12c3-4.5 7-6 11-6 3 0 5.5 2.5 7 6-1.5 3.5-4 6-7 6-4 0-8-1.5-11-6zM3 12l-1-4M3 12l-1 4"/><circle cx="16.5" cy="10.5" r="1"/></symbol>
+      <symbol id="broom" viewBox="0 0 24 24"><path d="M14 3l-4 9M7 12h7l3 9H4l3-9zM9 16l-1 5M12 16v5"/></symbol>
+      <symbol id="headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/><path d="M20 20c0 1.5-2 2-5 2"/></symbol>
     </defs>
   </svg>
 
@@ -669,10 +767,10 @@
       </button>
       <ul class="nav-links" id="menu">
         <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#profesionales">Profesionales</a></li>
+        <li><a href="#profesionales">Servicios</a></li>
+        <li><a href="#equipo">Equipo</a></li>
         <li><a href="#valores">Valores</a></li>
-        <li><a href="#actividades">Actividades</a></li>
-        <li><a href="#inscripcion">Inscripción</a></li>
+        <li><a href="#granja">Granja</a></li>
         <li><a href="#preguntas">Preguntas</a></li>
         <li><a href="#contacto">Contacto</a></li>
         <li><a class="btn btn-primary" href="#sumate">Súmate 💗</a></li>
@@ -726,14 +824,27 @@
         <div class="about-text reveal">
           <span class="eyebrow"><svg class="ico"><use href="#heart-line"/></svg> Nuestra historia</span>
           <h2>¿Quiénes somos?</h2>
-          <p>Fundación Familia C.E.A. Chile es una <strong>organización sin fines de lucro</strong> conformada por <strong>3 directoras cuidadoras de personas neurodivergentes</strong>.</p>
+          <p>Somos una <strong>fundación comunitaria sin fines de lucro</strong> de La Serena que acompaña a personas autistas, con otras condiciones del neurodesarrollo, y a sus familias, durante todo el ciclo vital. Nacimos de la mano de <strong>3 directoras cuidadoras de personas neurodivergentes</strong>.</p>
           <p>Decidimos formar una fundación que <strong>no excluya a ninguna persona</strong> que requiera apoyo social, emocional y/o terapéutico.</p>
           <div class="date-badge">
             <div class="cal"><b>NOV</b><span>30</span></div>
             <p><strong>Nos constituimos el 30 de noviembre de 2020</strong><br>como Fundación Familia C.E.A. Chile.</p>
           </div>
+          <h3 class="values-title">Nuestros valores</h3>
+          <ul class="values">
+            <li class="tint-blue">Respeto</li><li class="tint-green">Empatía</li><li class="tint-orange">Inclusión</li><li class="tint-pink">Trabajo en equipo</li>
+            <li class="tint-orange">Compromiso social</li><li class="tint-blue">Transparencia</li><li class="tint-teal">Solidaridad</li><li class="tint-purple">Enfoque neuroafirmativo</li>
+          </ul>
         </div>
         <div class="mv-stack">
+          <div class="card mv-card tint-green reveal">
+            <div class="icon bg-green"><svg class="ico"><use href="#sprout"/></svg></div>
+            <div>
+              <h3>Nuestro propósito</h3>
+              <p>Brindar apoyo, terapias y espacios de inclusión para mejorar la calidad de vida de nuestros usuarios y familias, con un enfoque respetuoso, humano y neuroafirmativo.</p>
+            </div>
+            <svg class="big ico" aria-hidden="true"><use href="#sprout"/></svg>
+          </div>
           <div class="card mv-card tint-pink reveal">
             <div class="icon bg-pink"><svg class="ico"><use href="#target"/></svg></div>
             <div>
@@ -791,31 +902,80 @@
     <section id="profesionales">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow"><svg class="ico"><use href="#brain"/></svg> Nuestro equipo</span>
-          <h2>Nuestros profesionales</h2>
-          <p>Contamos con profesionales especializados en las siguientes áreas:</p>
+          <span class="eyebrow"><svg class="ico"><use href="#brain"/></svg> Servicios</span>
+          <h2>Nuestros servicios y profesionales</h2>
+          <p>Contamos con profesionales especializados en las siguientes áreas. Toca cada una para conocer cómo te acompañan.</p>
         </div>
         <div class="pro-grid reveal">
-          <div class="pro"><span class="icon tint-pink"><svg class="ico"><use href="#brain"/></svg></span>Psicología</div>
-          <div class="pro"><span class="icon tint-blue"><svg class="ico"><use href="#cap"/></svg></span>Psicopedagogía</div>
-          <div class="pro"><span class="icon tint-teal"><svg class="ico"><use href="#hand"/></svg></span>Terapia Ocupacional</div>
-          <div class="pro"><span class="icon tint-blue"><svg class="ico"><use href="#chat"/></svg></span>Fonoaudiología</div>
-          <div class="pro"><span class="icon tint-teal"><svg class="ico"><use href="#run"/></svg></span>Kinesiología</div>
-          <div class="pro"><span class="icon tint-green"><svg class="ico"><use href="#apple"/></svg></span>Nutrición</div>
+          <button type="button" class="pro" data-info="psicologia"><span class="icon tint-pink"><svg class="ico"><use href="#brain"/></svg></span><span>Psicología<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+          <button type="button" class="pro" data-info="psicopedagogia"><span class="icon tint-blue"><svg class="ico"><use href="#cap"/></svg></span><span>Psicopedagogía<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+          <button type="button" class="pro" data-info="to"><span class="icon tint-teal"><svg class="ico"><use href="#hand"/></svg></span><span>Terapia Ocupacional<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+          <button type="button" class="pro" data-info="fono"><span class="icon tint-blue"><svg class="ico"><use href="#chat"/></svg></span><span>Fonoaudiología<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+          <button type="button" class="pro" data-info="kine"><span class="icon tint-teal"><svg class="ico"><use href="#run"/></svg></span><span>Kinesiología<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+          <button type="button" class="pro" data-info="nutricion"><span class="icon tint-green"><svg class="ico"><use href="#apple"/></svg></span><span>Nutrición<small>Ver más <span aria-hidden="true">›</span></small></span></button>
           <div class="pro"><span class="icon tint-purple"><svg class="ico"><use href="#pulse"/></svg></span><span>Neurología<small>desde los 14 años</small></span></div>
-          <div class="pro"><span class="icon tint-green"><svg class="ico"><use href="#book"/></svg></span>Educadora Diferencial</div>
-          <div class="pro"><span class="icon tint-purple"><svg class="ico"><use href="#foot"/></svg></span>Podología</div>
-          <div class="pro"><span class="icon tint-pink"><svg class="ico"><use href="#lotus"/></svg></span>Reiki y terapias complementarias</div>
-          <div class="pro"><span class="icon tint-orange"><svg class="ico"><use href="#plus"/></svg></span>¡Y más!</div>
+          <button type="button" class="pro" data-info="diferencial"><span class="icon tint-green"><svg class="ico"><use href="#book"/></svg></span><span>Educación Diferencial<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+          <button type="button" class="pro" data-info="docentes"><span class="icon tint-orange"><svg class="ico"><use href="#pencil"/></svg></span><span>Reforzamiento educativo<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+          <button type="button" class="pro" data-info="parvulos"><span class="icon tint-pink"><svg class="ico"><use href="#blocks"/></svg></span><span>Educación parvularia<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+          <button type="button" class="pro" data-info="musica"><span class="icon tint-purple"><svg class="ico"><use href="#music"/></svg></span><span>Música<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+          <button type="button" class="pro" data-info="podologia"><span class="icon tint-purple"><svg class="ico"><use href="#foot"/></svg></span><span>Podología<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+          <button type="button" class="pro" data-info="reiki"><span class="icon tint-pink"><svg class="ico"><use href="#lotus"/></svg></span><span>Reiki<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+          <button type="button" class="pro" data-info="floral"><span class="icon tint-orange"><svg class="ico"><use href="#flower"/></svg></span><span>Terapia floral<small>Ver más <span aria-hidden="true">›</span></small></span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="alt" id="equipo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><svg class="ico"><use href="#users"/></svg> Personas que suman</span>
+          <h2>Nuestro equipo</h2>
+          <p>Un equipo que suma vidas: cada llamada atendida, cada familia guiada y cada sesión también es inclusión.</p>
+        </div>
+        <div class="team-grid">
+          <article class="card person reveal">
+            <span class="avatar bg-pink" aria-hidden="true">C</span>
+            <h3>Carla</h3>
+            <p class="role">Directora Fundadora y Presidenta</p>
+            <p>Orientación y apoyo a familias, coordinación y gestión, información y comunicación, y trabajo en equipo con profesionales y la comunidad.</p>
+            <a href="mailto:directoracarlafundacioncea@gmail.com">directoracarlafundacioncea@gmail.com</a>
+          </article>
+          <article class="card person reveal">
+            <span class="avatar bg-teal" aria-hidden="true">CM</span>
+            <h3>Camila Molina</h3>
+            <p class="role">Trabajadora Social · Gestión social, redes y vinculación</p>
+            <p>Busca recursos y donaciones, capta padrinos, madrinas y socios, postula a fondos, crea redes con instituciones, vincula a nuevas familias y coordina el voluntariado.</p>
+          </article>
+          <article class="card person reveal">
+            <span class="avatar bg-purple" aria-hidden="true">FP</span>
+            <h3>Franchesca Plaza</h3>
+            <p class="role">Relacionadora Pública · Directora de Gestión Territorial y Vinculación</p>
+            <p>Representa y difunde la labor de la Fundación, genera alianzas y convenios, vincula con autoridades e instituciones y promueve su presencia en medios.</p>
+            <a href="mailto:relacionadorapublicacea@gmail.com">relacionadorapublicacea@gmail.com</a>
+          </article>
+          <article class="card person reveal">
+            <span class="avatar bg-green" aria-hidden="true">C</span>
+            <h3>Carlos</h3>
+            <p class="role">Educador Diferencial</p>
+            <p>Recibe y acompaña a todo aquel que requiera apoyo, trabajando desde sus capacidades y necesidades particulares con respeto, compromiso y vocación.</p>
+          </article>
+        </div>
+        <h3 class="team-sub reveal">Y un gran equipo detrás</h3>
+        <div class="team-roles reveal">
+          <div class="team-role"><span class="icon tint-blue"><svg class="ico"><use href="#headset"/></svg></span><div><strong>Secretarias administrativas</strong><span>Reciben y orientan a las familias, gestionan agendas, horas y cupos, y apoyan cada inscripción.</span></div></div>
+          <div class="team-role"><span class="icon tint-green"><svg class="ico"><use href="#paw"/></svg></span><div><strong>Encargada de visitas a la granja</strong><span>Coordina, recibe y acompaña a familias, colegios e instituciones en una experiencia segura y educativa.</span></div></div>
+          <div class="team-role"><span class="icon tint-orange"><svg class="ico"><use href="#broom"/></svg></span><div><strong>Aseo, sanitización y mantención</strong><span>Un espacio limpio, seguro y ordenado también es parte de la inclusión.</span></div></div>
+          <div class="team-role"><span class="icon tint-pink"><svg class="ico"><use href="#heart-line"/></svg></span><div><strong>Voluntarios y alumnas en práctica</strong><span>Personas que aportan su tiempo, talento y ganas a nuestra comunidad.</span></div></div>
         </div>
       </div>
     </section>
 
     <!-- VALORES -->
-    <section class="alt" id="valores">
+    <section id="valores">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow"><svg class="ico"><use href="#heart-line"/></svg> Transparencia</span>
+          <span class="eyebrow"><svg class="ico"><use href="#heart-line"/></svg> Tarifas y cuotas</span>
           <h2>Terapias y valores</h2>
           <p>Cupos de terapias en todo el ciclo vital, con valores accesibles para las familias.</p>
         </div>
@@ -823,23 +983,28 @@
           <div class="price-list reveal">
             <div class="price tint-pink">
               <span class="icon bg-pink"><svg class="ico"><use href="#doc"/></svg></span>
-              <span class="price-name">Inscripción<small>Único pago</small></span>
+              <span class="price-name">Matrícula<small>Inscripción única</small></span>
               <span class="price-tag bg-pink">$10.000</span>
             </div>
             <div class="price tint-blue">
               <span class="icon bg-blue"><svg class="ico"><use href="#cal"/></svg></span>
-              <span class="price-name">Cuota mensual</span>
+              <span class="price-name">Cuota mensual<small>Por grupo familiar</small></span>
               <span class="price-tag bg-blue">$5.000</span>
             </div>
             <div class="price tint-orange">
               <span class="icon bg-orange"><svg class="ico"><use href="#heart-line"/></svg></span>
-              <span class="price-name">Terapia individual<small>Por sesión</small></span>
+              <span class="price-name">Sesión de terapia<small>45 + 5 + 10 minutos</small></span>
               <span class="price-tag bg-orange">$15.000</span>
             </div>
             <div class="price tint-purple">
               <span class="icon bg-purple"><svg class="ico"><use href="#brain"/></svg></span>
               <span class="price-name">Neurología<small>Desde los 14 años en adelante</small></span>
               <span class="price-tag bg-purple">$55.000</span>
+            </div>
+            <div class="price tint-teal">
+              <span class="icon bg-teal"><svg class="ico"><use href="#ear"/></svg></span>
+              <span class="price-name">Lavado de oído</span>
+              <span class="price-tag bg-teal">$15.000</span>
             </div>
             <div class="price-foot"><svg class="ico"><use href="#sun"/></svg> Las actividades comunitarias son gratuitas.</div>
           </div>
@@ -849,7 +1014,7 @@
               <thead><tr><th>Test</th><th>Valor</th></tr></thead>
               <tbody>
                 <tr><td>ADOS-2<small>Permite medir nivel de autismo</small></td><td>$70.000</td></tr>
-                <tr><td>ADOS-2<small>Familias con Registro Social de Hogares bajo el 60%</small></td><td>$55.000</td></tr>
+                <tr><td>ADOS-2<small>Familias del tramo 40% del Registro Social de Hogares</small></td><td>$55.000</td></tr>
                 <tr><td>ADI-R<small>Complemento del ADOS-2</small></td><td>$78.000</td></tr>
                 <tr><td>Psicometría WISC-V<small>Menores de 16 años</small></td><td>$80.000</td></tr>
                 <tr><td>Psicometría WAIS-V<small>Mayores de 16 años</small></td><td>$80.000</td></tr>
@@ -862,7 +1027,7 @@
     </section>
 
     <!-- ACTIVIDADES -->
-    <section id="actividades">
+    <section class="alt" id="actividades">
       <div class="container act-layout">
         <div class="act-photos reveal" aria-hidden="true">
           <div class="blob"></div>
@@ -898,22 +1063,51 @@
     </section>
 
     <!-- GRANJA -->
-    <section class="alt" id="granja">
-      <div class="container farm">
-        <div class="farm-photo reveal">
-          <img src="img/granja.jpg" alt="Niño abrazando a un cabrito en la granja educativa" width="1288" height="596" loading="lazy">
+    <section id="granja">
+      <div class="container">
+        <div class="farm">
+          <div class="farm-photo reveal">
+            <img src="img/granja.jpg" alt="Niño abrazando a un cabrito en la granja terapéutica" width="1288" height="596" loading="lazy">
+          </div>
+          <div class="reveal">
+            <span class="eyebrow"><svg class="ico"><use href="#paw"/></svg> La granja también enseña a incluir</span>
+            <h2>Granja terapéutica</h2>
+            <p style="color:var(--muted);font-size:1.1rem">Contamos con una granja terapéutica y talleres que entregan herramientas prácticas a las personas y sus familias para enfrentar los desafíos del día a día. Aprender, incluir, cuidar y compartir.</p>
+            <ul class="farm-tags"><li>Regulación y bienestar emocional</li><li>Autonomía y responsabilidad</li><li>Experiencias sensoriales</li><li>Comunicación e interacción social</li><li>Conexión con la naturaleza</li><li>Aprendizaje y educación ambiental</li><li>Empatía, respeto y cuidado</li><li>Participación en talleres y actividades</li></ul>
+          </div>
         </div>
-        <div class="reveal">
-          <span class="eyebrow"><svg class="ico"><use href="#paw"/></svg> Aprender haciendo</span>
-          <h2>Granja educativa</h2>
-          <p style="color:var(--muted);font-size:1.1rem">Contamos con una granja educativa y talleres que entregan herramientas prácticas a las personas y sus familias para enfrentar los desafíos del día a día.</p>
-          <div class="farm-tags"><span>Granja educativa</span><span>Talleres prácticos</span><span>Para toda la familia</span></div>
+        <div class="farm-cards">
+          <div class="card reveal">
+            <div class="icon bg-green"><svg class="ico"><use href="#pin"/></svg></div>
+            <h3>Visitas a la granja</h3>
+            <p>Recibimos a personas, familias, colegios e instituciones con una experiencia segura, acogedora, inclusiva y educativa:</p>
+            <ul class="checks">
+              <li>Recorrido guiado por la granja</li>
+              <li>Normas de seguridad e higiene</li>
+              <li>Interacción supervisada con los animales</li>
+              <li>Experiencia adaptada a distintas edades y necesidades</li>
+              <li>Bienestar animal y educación ambiental</li>
+            </ul>
+            <a class="btn btn-teal" href="https://wa.me/56931803017?text=Hola%2C%20quisiera%20agendar%20una%20visita%20a%20la%20granja%20terap%C3%A9utica." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg> Agendar una visita</a>
+          </div>
+          <div class="card reveal">
+            <div class="icon bg-blue"><svg class="ico"><use href="#fish"/></svg></div>
+            <h3>Los peces también ayudan</h3>
+            <p>Pequeños seres que también ayudan a regular, acompañar y enseñar. Aportan calma, estimulación sensorial predecible y bienestar emocional:</p>
+            <ul class="checks">
+              <li>Favorecen ambientes de calma y apoyan la regulación sensorial</li>
+              <li>Promueven atención y concentración</li>
+              <li>Fomentan el respeto y cuidado de los seres vivos</li>
+              <li>Facilitan la interacción y la conversación</li>
+              <li>Humanizan los espacios de atención</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- INSCRIPCIÓN -->
-    <section id="inscripcion">
+    <section class="alt" id="inscripcion">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow"><svg class="ico"><use href="#clip"/></svg> Únete</span>
@@ -932,7 +1126,7 @@
           <a class="btn btn-teal" href="https://wa.me/56931803017?text=Hola%2C%20quisiera%20inscribirme%20en%20la%20Fundaci%C3%B3n%20Familia%20C.E.A." target="_blank" rel="noopener">
             <svg aria-hidden="true"><use href="#wa"/></svg> Quiero inscribirme
           </a>
-          <p>Inscripción $10.000 (único pago) · Cuota mensual $5.000</p>
+          <p>Matrícula $10.000 (única) · Cuota mensual $5.000 por grupo familiar</p>
         </div>
       </div>
     </section>
@@ -946,7 +1140,12 @@
         <svg style="left:22%;bottom:18%;width:34px;height:34px"><use href="#heart"/></svg>
         <svg style="right:24%;bottom:20%;width:60px;height:60px"><use href="#heart"/></svg>
       </div>
-      <div class="container"><p>¡Juntos construimos un futuro <span>con más inclusión</span>!</p></div>
+      <div class="container">
+        <blockquote class="quote">
+          <p>Las niñas y niños no nacen con malicia. No discriminan, no se burlan, no humillan… hasta que alguien les enseña a hacerlo.</p>
+          <p class="quote-strong"><span>¡Hagamos niñas y niños de bien!</span> Es tarea de todos.</p>
+        </blockquote>
+      </div>
       <svg class="wave bottom" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50c180 40 360 40 540 10S900 0 1080 25s270 40 360 30v35H0z" fill="#fff"/></svg>
     </section>
 
@@ -958,30 +1157,42 @@
           <h2>Hay muchas formas de ayudar</h2>
           <p>Tu apoyo nos permite seguir transformando vidas.</p>
         </div>
-        <div class="grid-4">
+        <div class="join-grid">
           <div class="card join-card lift reveal">
             <div class="icon bg-pink"><svg class="ico"><use href="#hug"/></svg></div>
             <h3>Realiza una donación</h3>
             <p>Tu aporte nos ayuda a seguir transformando vidas.</p>
-            <a class="btn btn-primary" href="#cuenta">Ver cuenta</a>
+            <div class="join-actions"><a class="btn btn-primary" href="#cuenta">Ver cuenta</a></div>
           </div>
           <div class="card join-card lift reveal">
             <div class="icon bg-blue"><svg class="ico"><use href="#users"/></svg></div>
             <h3>Sé voluntario/a</h3>
-            <p>Si quieres ser parte de nuestro equipo y ayudar, ¡te esperamos!</p>
-            <a class="btn btn-ghost" href="mailto:relacionadorapublicacea@gmail.com?subject=Quiero%20ser%20voluntario%2Fa%20en%20Fundaci%C3%B3n%20C.E.A.&amp;body=Hola%2C%20me%20gustar%C3%ADa%20sumarme%20como%20voluntario%2Fa.%0A%0ANombre%3A%0ATel%C3%A9fono%3A%0A%C2%BFEn%20qu%C3%A9%20te%20gustar%C3%ADa%20ayudar%3F%3A">Quiero ayudar</a>
+            <p>Tu talento, tu tiempo y tus ganas hacen la diferencia: actividades, difusión, campañas, granja, comunicaciones y mucho más.</p>
+            <div class="join-actions"><a class="btn btn-ghost" href="mailto:relacionadorapublicacea@gmail.com?subject=Quiero%20ser%20voluntario%2Fa%20en%20Fundaci%C3%B3n%20C.E.A.&amp;body=Hola%2C%20me%20gustar%C3%ADa%20sumarme%20como%20voluntario%2Fa.%0A%0ANombre%3A%0ATel%C3%A9fono%3A%0A%C2%BFEn%20qu%C3%A9%20te%20gustar%C3%ADa%20ayudar%3F%3A">Quiero ayudar</a><button type="button" class="link-btn" data-info="voluntariado">¿Cómo puedo ayudar?</button></div>
+          </div>
+          <div class="card join-card lift reveal">
+            <div class="icon bg-purple"><svg class="ico"><use href="#globe"/></svg></div>
+            <h3>Red territorial</h3>
+            <p>Sé directora o director de Gestión Territorial y Vinculación Regional y lleva la inclusión a tu ciudad, región o país.</p>
+            <div class="join-actions"><a class="btn btn-ghost" href="mailto:relacionadorapublicacea@gmail.com?subject=Quiero%20ser%20parte%20de%20la%20red%20territorial%20de%20Fundaci%C3%B3n%20C.E.A.&amp;body=Hola%2C%20me%20gustar%C3%ADa%20ser%20parte%20de%20la%20red%20territorial.%0A%0ANombre%3A%0ACiudad%20o%20pa%C3%ADs%3A%0ATel%C3%A9fono%3A">Quiero ser parte</a><button type="button" class="link-btn" data-info="territorial">Ver funciones</button></div>
           </div>
           <div class="card join-card lift reveal">
             <div class="icon bg-purple"><svg class="ico"><use href="#cap"/></svg></div>
             <h3>Realiza tu práctica</h3>
             <p>Abrimos nuestras puertas a estudiantes que quieran aprender y crecer con nosotros.</p>
-            <a class="btn btn-ghost" href="mailto:directoracarlafundacioncea@gmail.com?subject=Pr%C3%A1ctica%20profesional">Postular</a>
+            <div class="join-actions"><a class="btn btn-ghost" href="mailto:directoracarlafundacioncea@gmail.com?subject=Pr%C3%A1ctica%20profesional">Postular</a><button type="button" class="link-btn" data-info="practica">Ver funciones</button></div>
           </div>
           <div class="card join-card lift reveal">
             <div class="icon bg-orange"><svg class="ico"><use href="#handshake"/></svg></div>
             <h3>Alianzas</h3>
-            <p>Empresas, instituciones y organizaciones también pueden ser parte.</p>
-            <a class="btn btn-ghost" href="mailto:relacionadorapublicacea@gmail.com?subject=Alianza%20con%20Fundaci%C3%B3n%20C.E.A.&amp;body=Hola%2C%20nos%20gustar%C3%ADa%20conversar%20sobre%20una%20alianza.%0A%0AEmpresa%20u%20organizaci%C3%B3n%3A%0ANombre%20de%20contacto%3A%0ATel%C3%A9fono%3A">Conversemos</a>
+            <p>Empresas, instituciones y organizaciones también pueden ser parte. Cada alianza puede convertirse en una nueva oportunidad para nuestras familias.</p>
+            <div class="join-actions"><a class="btn btn-ghost" href="mailto:relacionadorapublicacea@gmail.com?subject=Alianza%20con%20Fundaci%C3%B3n%20C.E.A.&amp;body=Hola%2C%20nos%20gustar%C3%ADa%20conversar%20sobre%20una%20alianza.%0A%0AEmpresa%20u%20organizaci%C3%B3n%3A%0ANombre%20de%20contacto%3A%0ATel%C3%A9fono%3A">Conversemos</a></div>
+          </div>
+          <div class="card join-card lift reveal">
+            <div class="icon bg-teal"><svg class="ico"><use href="#heart-line"/></svg></div>
+            <h3>Comunidad CEA</h3>
+            <p>Cada persona aporta desde el respeto, la inclusión y el corazón:</p>
+            <ul class="mini-tags"><li>Acompañar</li><li>Incluir</li><li>Compartir</li><li>Cuidar</li><li>Participar</li><li>Conectar</li></ul>
           </div>
         </div>
 
@@ -1026,7 +1237,7 @@
           </details>
           <details>
             <summary>¿Cuánto cuesta pertenecer a la fundación?</summary>
-            <div class="answer"><ul><li>Inscripción: <strong>$10.000</strong> (único pago)</li><li>Cuota mensual: <strong>$5.000</strong></li><li>Terapia individual: <strong>$15.000</strong> por sesión</li><li>Neurología (desde los 14 años): <strong>$55.000</strong></li></ul><p>Las actividades comunitarias son <strong>gratuitas</strong>. <a href="#valores">Ver todos los valores</a>.</p></div>
+            <div class="answer"><ul><li>Matrícula: <strong>$10.000</strong> (inscripción única)</li><li>Cuota mensual: <strong>$5.000</strong> por grupo familiar</li><li>Sesión de terapia: <strong>$15.000</strong></li><li>Neurología (desde los 14 años): <strong>$55.000</strong></li></ul><p>Las actividades comunitarias son <strong>gratuitas</strong>. <a href="#valores">Ver todos los valores</a>.</p></div>
           </details>
           <details>
             <summary>¿Qué documentos necesito para inscribirme?</summary>
@@ -1037,16 +1248,28 @@
             <div class="answer"><p>Sí. Realizamos <strong>ADOS-2</strong> y su complemento <strong>ADI-R</strong>, además de evaluaciones psicométricas <strong>WISC-V</strong> (menores de 16 años) y <strong>WAIS-V</strong> (mayores de 16 años). <a href="#valores">Ver valores de las evaluaciones</a>.</p></div>
           </details>
           <details>
+            <summary>¿Ofrecen apoyo escolar o reforzamiento?</summary>
+            <div class="answer"><p>Sí. Contamos con <strong>psicopedagogía</strong>, <strong>educación diferencial</strong>, <strong>educación parvularia</strong> y <strong>docentes</strong> que acompañan el aprendizaje en educación básica, media y superior: reforzamiento, hábitos de estudio y orientación educativa. <a href="#profesionales">Ver servicios</a>.</p></div>
+          </details>
+          <details>
+            <summary>¿Colegios o instituciones pueden visitar la granja?</summary>
+            <div class="answer"><p>Sí. Recibimos a personas, familias, colegios e instituciones en nuestra <strong>granja terapéutica</strong>, con un recorrido guiado e interacción supervisada con los animales. <a href="https://wa.me/56931803017?text=Hola%2C%20quisiera%20agendar%20una%20visita%20a%20la%20granja%20terap%C3%A9utica." target="_blank" rel="noopener">Agenda tu visita por WhatsApp</a>.</p></div>
+          </details>
+          <details>
+            <summary>¿El Reiki y la terapia floral reemplazan otros tratamientos?</summary>
+            <div class="answer"><p><strong>No.</strong> Son <strong>prácticas complementarias de bienestar</strong>: no reemplazan tratamientos médicos, psicológicos ni otras atenciones de salud. Se realizan con consentimiento y, cuando corresponde, se orienta y deriva a otros profesionales.</p></div>
+          </details>
+          <details>
             <summary>¿Qué actividades gratuitas ofrecen?</summary>
             <div class="answer"><p>Paseos, salidas pedagógicas, Fiesta del Día de la Niñez, Fiesta de Navidad, talleres grupales y socioeducativos, charlas, apoyo social, clases de psicomotricidad, celebraciones típicas y escuelas de verano e invierno.</p></div>
           </details>
           <details>
             <summary>¿Dónde están y cuál es el horario?</summary>
-            <div class="answer"><p>Estamos en <strong>Los Carrera #134–136, La Serena Centro</strong>. Atendemos de <strong>lunes a sábado</strong>, de 09:00 a 13:00 y de 14:00 a 19:00 hrs.</p></div>
+            <div class="answer"><p>Estamos en <strong>Los Carrera #134–136, La Serena Centro</strong>. Atendemos de <strong>lunes a sábado</strong>, de 09:00 a 13:00 y de 14:00 a 19:00 hrs. Los feriados permanecemos cerrados.</p></div>
           </details>
           <details>
             <summary>¿Cómo puedo ayudar a la fundación?</summary>
-            <div class="answer"><p>Puedes <a href="#cuenta">hacer una donación</a> por transferencia, <a href="mailto:relacionadorapublicacea@gmail.com?subject=Quiero%20ser%20voluntario%2Fa%20en%20Fundaci%C3%B3n%20C.E.A.">sumarte como voluntario/a</a>, realizar tu práctica profesional con nosotros o, si representas a una empresa o institución, <a href="mailto:relacionadorapublicacea@gmail.com?subject=Alianza%20con%20Fundaci%C3%B3n%20C.E.A.">proponernos una alianza</a>.</p></div>
+            <div class="answer"><p>Puedes <a href="#cuenta">hacer una donación</a> por transferencia, <a href="mailto:relacionadorapublicacea@gmail.com?subject=Quiero%20ser%20voluntario%2Fa%20en%20Fundaci%C3%B3n%20C.E.A.">sumarte como voluntario/a</a>, ser parte de nuestra red territorial, realizar tu práctica profesional con nosotros o, si representas a una empresa o institución, <a href="mailto:relacionadorapublicacea@gmail.com?subject=Alianza%20con%20Fundaci%C3%B3n%20C.E.A.">proponernos una alianza</a>.</p></div>
           </details>
         </div>
         <p class="faq-cta reveal">¿Tienes otra pregunta? <a href="https://wa.me/56931803017" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>.</p>
@@ -1077,7 +1300,7 @@
       "name": "¿Cuánto cuesta pertenecer a la fundación?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Inscripción $10.000 (único pago), cuota mensual $5.000, terapia individual $15.000 por sesión y neurología (desde los 14 años) $55.000. Las actividades comunitarias son gratuitas."
+        "text": "Matrícula $10.000 (inscripción única), cuota mensual $5.000 por grupo familiar, sesión de terapia $15.000 y neurología (desde los 14 años) $55.000. Las actividades comunitarias son gratuitas."
       }
     },
     {
@@ -1098,6 +1321,30 @@
     },
     {
       "@type": "Question",
+      "name": "¿Ofrecen apoyo escolar o reforzamiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Contamos con psicopedagogía, educación diferencial, educación parvularia y docentes que acompañan el aprendizaje en educación básica, media y superior: reforzamiento, hábitos de estudio y orientación educativa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Colegios o instituciones pueden visitar la granja?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Recibimos a personas, familias, colegios e instituciones en nuestra granja terapéutica, con un recorrido guiado e interacción supervisada con los animales. Las visitas se coordinan por WhatsApp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El Reiki y la terapia floral reemplazan otros tratamientos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Son prácticas complementarias de bienestar: no reemplazan tratamientos médicos, psicológicos ni otras atenciones de salud. Se realizan con consentimiento y, cuando corresponde, se orienta y deriva a otros profesionales."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "¿Qué actividades gratuitas ofrecen?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1109,7 +1356,7 @@
       "name": "¿Dónde están y cuál es el horario?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Estamos en Los Carrera #134–136, La Serena Centro. Atendemos de lunes a sábado, de 09:00 a 13:00 y de 14:00 a 19:00 hrs."
+        "text": "Estamos en Los Carrera #134–136, La Serena Centro. Atendemos de lunes a sábado, de 09:00 a 13:00 y de 14:00 a 19:00 hrs. Los feriados permanecemos cerrados."
       }
     },
     {
@@ -1117,7 +1364,7 @@
       "name": "¿Cómo puedo ayudar a la fundación?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Puedes hacer una donación por transferencia, sumarte como voluntario/a, realizar tu práctica profesional con nosotros o, si representas a una empresa o institución, proponernos una alianza."
+        "text": "Puedes hacer una donación por transferencia, sumarte como voluntario/a, ser parte de nuestra red territorial, realizar tu práctica profesional con nosotros o, si representas a una empresa o institución, proponernos una alianza."
       }
     }
   ]
@@ -1137,7 +1384,7 @@
           <div class="contact-list reveal">
             <a class="contact-item" href="https://wa.me/56931803017" target="_blank" rel="noopener">
               <span class="icon" style="background:#25D366;color:#fff"><svg aria-hidden="true"><use href="#wa"/></svg></span>
-              <span><small>WhatsApp Directora</small><strong>+56 9 3180 3017</strong></span>
+              <span><small>WhatsApp Fundación · consultas, información y coordinación</small><strong>+56 9 3180 3017</strong></span>
             </a>
             <a class="contact-item" href="tel:+56223583165">
               <span class="icon bg-orange"><svg class="ico"><use href="#phone"/></svg></span>
@@ -1149,15 +1396,19 @@
             </a>
             <a class="contact-item" href="mailto:directoracarlafundacioncea@gmail.com">
               <span class="icon bg-blue"><svg class="ico"><use href="#mail"/></svg></span>
-              <span><small>Correo oficial</small><strong>directoracarlafundacioncea@gmail.com</strong></span>
+              <span><small>Correo institucional</small><strong>directoracarlafundacioncea@gmail.com</strong></span>
+            </a>
+            <a class="contact-item" href="mailto:relacionadorapublicacea@gmail.com">
+              <span class="icon bg-purple"><svg class="ico"><use href="#handshake"/></svg></span>
+              <span><small>Voluntariado y alianzas</small><strong>relacionadorapublicacea@gmail.com</strong></span>
             </a>
             <a class="contact-item" href="https://www.google.com/maps/search/?api=1&query=Los+Carrera+134,+La+Serena,+Chile" target="_blank" rel="noopener">
               <span class="icon bg-pink"><svg class="ico"><use href="#pin"/></svg></span>
               <span><small>Dirección</small><strong>Los Carrera #134–136, La Serena Centro</strong></span>
             </a>
             <div class="contact-item">
-              <span class="icon bg-purple"><svg class="ico"><use href="#clock"/></svg></span>
-              <span><small>Horario · Lunes a sábado</small><strong>09:00 a 13:00 · 14:00 a 19:00 hrs</strong></span>
+              <span class="icon bg-green"><svg class="ico"><use href="#clock"/></svg></span>
+              <span><small>Horario · Lunes a sábado · Feriados cerrado</small><strong>09:00 a 13:00 · 14:00 a 19:00 hrs</strong></span>
             </div>
           </div>
           <div class="map reveal">
@@ -1187,7 +1438,8 @@
           <h4>Navegación</h4>
           <ul>
             <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#profesionales">Profesionales</a></li>
+            <li><a href="#profesionales">Servicios</a></li>
+            <li><a href="#equipo">Equipo</a></li>
             <li><a href="#valores">Terapias y valores</a></li>
             <li><a href="#actividades">Actividades</a></li>
             <li><a href="#inscripcion">Inscripción</a></li>
@@ -1199,7 +1451,7 @@
           <h4>Visítanos</h4>
           <ul>
             <li>Los Carrera #134–136, La Serena Centro</li>
-            <li>Lunes a sábado<br>09:00–13:00 · 14:00–19:00</li>
+            <li>Lunes a sábado<br>09:00–13:00 · 14:00–19:00<br>Feriados cerrado</li>
             <li><a href="tel:+56223583165">2 2358 3165</a></li>
           </ul>
         </div>
@@ -1235,6 +1487,17 @@
     <button class="a11y-switch" type="button" role="switch" aria-checked="false" data-pref="ul">Subrayar enlaces <span class="knob" aria-hidden="true"></span></button>
     <button class="a11y-reset" type="button">Restablecer</button>
   </div>
+  <dialog class="info-dialog" id="info-dialog" aria-labelledby="info-title">
+    <div class="dlg-head">
+      <span class="icon" id="info-icon"><svg class="ico"><use href=""/></svg></span>
+      <div><h2 id="info-title"></h2><p id="info-lead"></p></div>
+      <button type="button" class="dlg-close" aria-label="Cerrar">×</button>
+    </div>
+    <ul class="dlg-list" id="info-list"></ul>
+    <p class="dlg-note" id="info-note" hidden></p>
+    <div class="dlg-actions"><a class="btn btn-teal" id="info-action" href="#"></a></div>
+  </dialog>
+  <script type="application/json" id="info-data">{"psicologia": {"title": "Psicología", "icon": "brain", "color": "pink", "lead": "Acompañando la salud mental y el bienestar durante todo el ciclo vital.", "items": [["Salud mental y bienestar emocional", "Acompañamiento en ansiedad, estrés, depresión, autoestima y más."], ["Evaluación psicológica", "Exploración del funcionamiento emocional, conductual, cognitivo y social."], ["Regulación emocional", "Estrategias para reconocer y manejar emociones."], ["Neurodivergencias", "Acompañamiento respetuoso y neuroafirmativo."], ["Infancia y adolescencia", "Desarrollo socioemocional, conducta, adaptación y convivencia."], ["Habilidades sociales", "Comunicación, relaciones, límites y resolución de conflictos."], ["Adultez y personas mayores", "Salud mental, cambios de roles, autonomía y proyectos de vida."], ["Psicoterapia e intervención", "Procesos individuales, familiares o grupales según las necesidades de cada persona."], ["Autoestima y autoconocimiento", "Reconocimiento de fortalezas, identidad y desarrollo personal."], ["Familias, cuidadores y vínculos", "Orientación, apoyo y herramientas para el bienestar familiar."], ["Crisis, duelo y prevención", "Contención, orientación y acompañamiento en situaciones difíciles."], ["Psicología social y comunitaria", "Trabajo con grupos, comunidad y redes para una mejor calidad de vida."]], "note": null, "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Psicolog%C3%ADa."}}, "psicopedagogia": {"title": "Psicopedagogía", "icon": "cap", "color": "blue", "lead": "Cada persona puede aprender de diferentes maneras. La Psicopedagogía ayuda a descubrir cómo.", "items": [["Aprendizaje", "Comprensión, adquisición de conocimientos y desarrollo de estrategias para aprender de manera significativa."], ["Lectura y escritura", "Conciencia fonológica, decodificación, fluidez, comprensión lectora, ortografía y producción escrita."], ["Matemáticas", "Razonamiento lógico-matemático, cálculo y resolución de problemas."], ["Atención y memoria", "Estrategias para sostener la atención, organizar información y mejorar la memoria de trabajo."], ["Funciones ejecutivas", "Planificación, organización, manejo del tiempo, flexibilidad e inicio y finalización de tareas."], ["Autonomía académica", "Comprender cómo aprende cada persona para lograr mayor independencia en sus estudios."], ["Adaptaciones educativas", "Propuestas y estrategias para ajustar actividades, materiales e instrucciones según sus necesidades."], ["Hábitos y técnicas de estudio", "Organización de materiales, rutinas y estrategias personalizadas."], ["Dificultades de aprendizaje", "Acompañamiento en desafíos de lectura, escritura, matemáticas y otras áreas académicas."], ["Neurodivergencias", "Apoyo respetuoso y neuroafirmativo para personas autistas, con TDAH y otros perfiles, considerando sus fortalezas e intereses."], ["Estimulación cognitiva", "Actividades para fortalecer atención, memoria, razonamiento y resolución de problemas."], ["Orientación a familias", "Herramientas y estrategias para acompañar el aprendizaje en casa y colaborar con los establecimientos educacionales."]], "note": null, "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Psicopedagog%C3%ADa."}}, "to": {"title": "Terapia Ocupacional", "icon": "hand", "color": "teal", "lead": "Apoyando el desarrollo, la autonomía y una vida plena en todas las etapas.", "items": [["Autonomía y vida diaria", "Vestirse, alimentarse, higiene, rutinas y cuidados personales."], ["Procesamiento sensorial", "Regulación y atención a las necesidades sensoriales."], ["Motricidad", "Motricidad fina, motricidad gruesa, coordinación y destreza manual."], ["Regulación emocional", "Autorregulación, manejo de emociones y estrategias para la vida diaria."], ["Juego", "Exploración, intereses, participación y habilidades sociales."], ["Cognición funcional", "Atención, memoria, planificación, organización y resolución de problemas."], ["Educación y participación escolar", "Estrategias, adaptaciones y apoyo en el aprendizaje."], ["Trabajo e inclusión laboral", "Habilidades, rutinas, adaptaciones y participación significativa."], ["Participación social y comunitaria", "Relaciones, ocio, tiempo libre y vida en comunidad."], ["Adaptaciones y accesibilidad", "Recomendación de apoyos, modificación de entornos y tecnologías de apoyo."]], "note": null, "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Terapia%20Ocupacional."}}, "fono": {"title": "Fonoaudiología", "icon": "chat", "color": "blue", "lead": "Comunicación para una vida con más oportunidades.", "items": [["Lenguaje y comunicación", ""], ["Habla y articulación", ""], ["Comunicación aumentativa y alternativa", ""], ["Voz y fluidez", ""], ["Respiración", ""], ["Alimentación y deglución", ""], ["Motricidad orofacial", ""], ["Comunicación social y cognitiva", ""], ["Funciones orofaciales", ""], ["Rehabilitación muscular facial y estética", ""], ["Audición y habilidades auditivas", ""]], "note": null, "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Fonoaudiolog%C3%ADa."}}, "kine": {"title": "Kinesiología", "icon": "run", "color": "teal", "lead": "Movimiento, funcionalidad y autonomía durante todo el ciclo vital.", "items": [["Desarrollo motor", "Favorece habilidades motoras gruesas como equilibrio, coordinación, marcha, saltos y desplazamiento."], ["Equilibrio y coordinación", "Apoya el control postural, el equilibrio y la coordinación en diferentes actividades de la vida diaria."], ["Postura", "Evalúa y trabaja la postura para favorecer una mejor funcionalidad y prevenir molestias."], ["Fuerza y movilidad", "Mejora la fuerza, resistencia, flexibilidad y el rango de movimiento según las necesidades de cada persona."], ["Manejo del dolor", "Estrategias de movimiento y ejercicio terapéutico para disminuir su impacto en la vida diaria."], ["Prevención de caídas", "Fortalece el equilibrio, la movilidad y la seguridad en las actividades diarias."], ["Rehabilitación neurológica", "Acompaña en condiciones que afectan el movimiento, el tono muscular, la coordinación y la funcionalidad."], ["Kinesiología respiratoria", "Técnicas y ejercicios para favorecer una mejor función respiratoria."], ["Rehabilitación musculoesquelética", "Previene y recupera lesiones en músculos, articulaciones y tendones, favoreciendo el movimiento seguro y funcional."], ["Autonomía física", "Favorece la independencia en las actividades de la vida diaria y la participación en la comunidad."]], "note": null, "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Kinesiolog%C3%ADa."}}, "nutricion": {"title": "Nutrición", "icon": "apple", "color": "green", "lead": "Alimentación, salud y bienestar durante todo el ciclo vital.", "items": [["Evaluación nutricional", "Analiza hábitos, estado nutricional, crecimiento y desarrollo para crear un plan personalizado."], ["Hábitos alimentarios", "Acompaña en la creación de rutinas realistas, flexibles y sostenibles."], ["Neurodivergencias", "Acompañamiento respetuoso en personas autistas, con TDAH y otros perfiles, considerando sus necesidades sensoriales y preferencias."], ["Selectividad alimentaria", "Evaluación y estrategias frente a repertorios alimentarios restringidos, con un enfoque inclusivo y sin presiones."], ["Crecimiento y desarrollo", "Seguimiento nutricional en la infancia, adolescencia y detección de posibles riesgos."], ["Salud digestiva", "Apoyo nutricional en determinadas alteraciones digestivas, coordinándose con otros profesionales cuando es necesario."], ["Enfermedades crónicas", "Intervención nutricional en diabetes, hipertensión, dislipidemias y otras condiciones, según indicación profesional."], ["Alimentación saludable", "Educación alimentaria para elegir, preparar y disfrutar comidas nutritivas y equilibradas."], ["Alergias e intolerancias", "Orientación y planificación nutricional cuando existe diagnóstico o indicación correspondiente."], ["Nutrición en personas mayores", "Previene la pérdida de masa muscular, la malnutrición y la deshidratación, favoreciendo la autonomía."], ["Nutrición deportiva", "Alimentación e hidratación adecuada para mejorar el rendimiento y prevenir lesiones."], ["Orientación a familias", "Entrega herramientas para acompañar la alimentación en el hogar de manera positiva y respetuosa."]], "note": null, "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Nutrici%C3%B3n."}}, "diferencial": {"title": "Educación Diferencial", "icon": "book", "color": "green", "lead": "Diferentes formas de aprender requieren diferentes formas de enseñar.", "items": [["Inclusión educativa", "Favorece la participación, el acceso y el aprendizaje en igualdad de oportunidades."], ["Necesidades educativas especiales (NEE)", "Identifica fortalezas, necesidades de apoyo y barreras para el aprendizaje."], ["Neurodivergencias", "Acompañamiento respetuoso para personas autistas, con TDAH y otros perfiles."], ["Funciones ejecutivas", "Planificación, organización, manejo del tiempo, seguimiento de instrucciones e inicio y término de tareas."], ["Adecuaciones curriculares", "Ajusta objetivos, actividades, materiales, metodologías y formas de evaluación según las necesidades de cada persona."], ["Lectura, escritura y matemáticas", "Desarrollo y refuerzo de habilidades instrumentales según cada necesidad."], ["Autonomía y habilidades adaptativas", "Herramientas para desenvolverse con mayor independencia en el ámbito educativo y cotidiano."], ["Orientación a familias", "Estrategias para acompañar el aprendizaje y favorecer la participación desde el hogar."]], "note": "Nuestro Educador Diferencial, Carlos, está listo para recibir y acompañar a todo aquel que requiera apoyo, trabajando desde sus capacidades y necesidades particulares con respeto, compromiso y vocación.", "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Educaci%C3%B3n%20Diferencial."}}, "docentes": {"title": "Reforzamiento educativo", "icon": "pencil", "color": "orange", "lead": "Nuestros docentes acompañan el aprendizaje en cada etapa de la trayectoria educativa.", "items": [["Educación básica", "Lectura y escritura, matemáticas, ciencias, comprensión y expresión de ideas, convivencia y habilidades sociales, organización y hábitos de estudio."], ["Educación media", "Comprensión y producción de textos, matemáticas, ciencias, humanidades, pensamiento crítico, técnicas de estudio y orientación para la transición a estudios superiores, formación técnica o vida laboral."], ["Educación superior", "Contenidos especializados, análisis y pensamiento crítico, apoyo en trabajos e investigación, tutorías académicas, gestión del tiempo y preparación para evaluaciones."], ["Reforzamiento educativo", "Apoyo en contenidos, nivelación y preparación de evaluaciones."], ["Hábitos y técnicas de estudio", "Estrategias para organizar el tiempo, mejorar la concentración y potenciar el aprendizaje."], ["Aprendizaje personalizado", "Estrategias adaptadas a las necesidades, fortalezas y ritmo de cada persona."], ["Autonomía académica", "Fomento de habilidades para un aprendizaje más independiente y significativo."], ["Acompañamiento integral", "Trabajo coordinado con familias y otros profesionales cuando corresponda."], ["Orientación educativa", "Apoyo en la toma de decisiones y en la proyección de la trayectoria educativa."]], "note": null, "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Reforzamiento%20educativo."}}, "parvulos": {"title": "Educación parvularia", "icon": "blocks", "color": "pink", "lead": "Educadores y técnicos/as en párvulos acompañan los primeros aprendizajes a través del juego, la exploración y experiencias significativas.", "items": [["Educadores de párvulos", "Planificación pedagógica, desarrollo integral, lenguaje y comunicación, pensamiento matemático, desarrollo socioemocional, autonomía, motricidad, exploración del entorno, inclusión y diversidad, observación y evaluación pedagógica, y trabajo con familias e interdisciplinario."], ["Técnicos/as en párvulos", "Apoyo en las experiencias pedagógicas, acompañamiento en actividades y juego, preparación de materiales y espacios, rutinas de alimentación, higiene y autonomía, cuidado y bienestar, observación y registro, trabajo con familias y resguardo de la seguridad."]], "note": null, "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Educaci%C3%B3n%20parvularia."}}, "musica": {"title": "Música", "icon": "music", "color": "purple", "lead": "La música y sus profesores desarrollan emociones, estimulan el aprendizaje, potencian habilidades, fomentan la inclusión y conectan con la vida real.", "items": [["Desarrollo emocional", ""], ["Estimulación del aprendizaje", ""], ["Potenciar habilidades", ""], ["Inclusión", ""], ["Conexión con la vida real", ""]], "note": null, "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20M%C3%BAsica."}}, "podologia": {"title": "Podología", "icon": "foot", "color": "purple", "lead": "Cuidar nuestros pies también es cuidar nuestra salud, movilidad y bienestar.", "items": [["Evaluación podológica", "Observa el estado de la piel, uñas y estructuras del pie para identificar necesidades de atención o derivación."], ["Cuidado y corte de uñas", "Realiza un corte adecuado y seguro, especialmente en personas que tienen dificultades para hacerlo."], ["Uñas encarnadas", "Manejo podológico dentro de sus competencias y derivación médica cuando corresponda."], ["Callos y durezas", "Tratamiento de hiperqueratosis y otras alteraciones que pueden producir molestias."], ["Cuidado de la piel del pie", "Identifica y trata fisuras, resequedad y otras alteraciones, entregando recomendaciones de autocuidado."], ["Prevención", "Educación sobre higiene, cuidado de uñas, elección de calzado y hábitos que favorezcan la salud de los pies."], ["Pie de personas mayores", "Cuidados preventivos para mantener comodidad, movilidad, autonomía y una mejor calidad de vida."], ["Cuidados especiales", "Acompañamiento para personas con condiciones específicas (como diabetes u otras), con evaluación del riesgo y derivación cuando corresponda."], ["Apoyo a la movilidad y bienestar", "Unos pies cuidados pueden favorecer mayor comodidad para caminar y realizar actividades de la vida diaria."], ["Educación a familias y cuidadores", "Orientación sobre higiene, observación de señales de alerta y cuidados cotidianos."]], "note": "La podología contribuye al bienestar de las personas, pero no reemplaza atenciones médicas cuando se requieren.", "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Podolog%C3%ADa."}}, "reiki": {"title": "Reiki", "icon": "lotus", "color": "pink", "lead": "Un espacio complementario de relajación, calma y bienestar, respetando las necesidades, preferencias y el ritmo de cada persona.", "items": [["Relajación y bienestar", "Favorece un estado de calma, descanso y bienestar general."], ["Manejo complementario del estrés", "Puede ayudar a reducir la tensión percibida y favorecer la tranquilidad."], ["Conexión corporal y pausa", "Invita a escuchar el cuerpo, la respiración y a dedicar un tiempo de calma en el día."], ["Bienestar emocional subjetivo", "Un espacio de acompañamiento y autocuidado que muchas personas encuentran reconfortante."], ["Autocuidado", "Apoya la creación de momentos de descanso y bienestar personal."], ["Todo el ciclo vital", "Puede ser una práctica complementaria para niños, adolescentes, adultos y personas mayores."], ["Espacio respetuoso y seguro", "Se realiza con consentimiento, respetando los límites, las necesidades y preferencias de cada persona."], ["Trabajo complementario", "Puede coexistir con otras intervenciones y apoyos profesionales."]], "note": "Práctica complementaria de bienestar. No reemplaza tratamientos ni atenciones de salud.", "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Reiki."}}, "floral": {"title": "Terapia floral", "icon": "flower", "color": "orange", "lead": "Un espacio complementario de escucha, autocuidado y bienestar emocional, respetando las necesidades, preferencias y el ritmo de cada persona.", "items": [["Escucha y acompañamiento", "Espacio de conversación respetuoso para expresar emociones, experiencias y lo que cada persona está viviendo."], ["Bienestar emocional subjetivo", "Puede apoyar en la gestión de emociones cotidianas y favorecer una mayor sensación de calma y equilibrio."], ["Autocuidado", "Invita a reconocer necesidades personales y generar momentos para el bienestar del día a día."], ["Manejo complementario del estrés", "Puede contribuir a disminuir la tensión y favorecer la tranquilidad en situaciones de sobrecarga o cambios."], ["Acompañamiento individualizado", "Selección de esencias florales según lo expresado por la persona, dentro del sistema de terapia floral utilizado por el terapeuta."], ["Seguimiento", "Espacio para conversar sobre la experiencia de la persona y ajustar el acompañamiento."], ["Orientación y derivación", "Cuando se identifica la necesidad de apoyo psicológico, médico u otra atención de salud, se realiza la orientación y derivación correspondiente."]], "note": "Práctica complementaria de bienestar. No reemplaza tratamientos médicos, psicológicos ni otras atenciones de salud.", "action": {"label": "Consultar por WhatsApp", "href": "https://wa.me/56931803017?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20Terapia%20floral."}}, "voluntariado": {"title": "Rol de los y las voluntarios", "icon": "users", "color": "blue", "lead": "Tu talento, tu tiempo y tus ganas hacen la diferencia. ¡Hay muchas formas de ayudar!", "items": [["Actividades comunitarias", "Apoyo en actividades comunitarias, talleres y eventos."], ["Difusión", "Difusión de nuestra labor en redes sociales y en la comunidad."], ["Vinculación territorial", "Vinculación territorial y creación de nuevas redes."], ["Campañas solidarias", "Campañas solidarias, colectas, donaciones y recaudación."], ["Decoración y materiales", "Decoración, manualidades y preparación de materiales."], ["Recursos didácticos", "Elaboración de recursos didácticos, sensoriales y recreativos."], ["Granja terapéutica", "Apoyo en actividades de nuestra granja terapéutica."], ["Celebraciones", "Organización y preparación de celebraciones y actividades."], ["Donaciones e insumos", "Clasificación y organización de donaciones e insumos."], ["Comunicaciones", "Apoyo en fotografía, diseño, comunicaciones y creación de contenido."], ["Apoyo administrativo", "Apoyo administrativo y organizacional."], ["Charlas y talleres", "Profesionales y estudiantes: charlas, talleres y actividades educativas."], ["Nuevos proyectos", "Proponer nuevos proyectos e iniciativas para nuestra comunidad."], ["Buen trato", "Acompañar acciones comunitarias promoviendo el respeto, buen trato, inclusión y dignidad."]], "note": "Tu tiempo también transforma realidades.", "action": {"label": "Quiero ayudar", "href": "mailto:relacionadorapublicacea@gmail.com?subject=Quiero%20ser%20voluntario%2Fa%20en%20Fundaci%C3%B3n%20C.E.A.&body=Hola%2C%20me%20gustar%C3%ADa%20sumarme%20como%20voluntario%2Fa.%0A%0ANombre%3A%0ATel%C3%A9fono%3A%0A%C2%BFEn%20qu%C3%A9%20te%20gustar%C3%ADa%20ayudar%3F%3A"}}, "territorial": {"title": "Directoras y directores de Gestión Territorial y Vinculación Regional", "icon": "globe", "color": "purple", "lead": "Sé parte de nuestra red y lleva la inclusión más lejos. Desde tu ciudad también puedes transformar realidades.", "items": [["Representar", "Representa y visibiliza la labor de la Fundación en tu región o país."], ["Alianzas", "Genera y fortalece alianzas estratégicas y convenios de colaboración."], ["Vinculación", "Vincula con municipalidades, servicios públicos, centros de salud, colegios, universidades y organizaciones."], ["Apoyos", "Busca donaciones, auspicios, padrinos, madrinas y nuevas oportunidades de apoyo."], ["Actividades territoriales", "Promueve la participación en ferias, encuentros y actividades territoriales."], ["Nuevas familias", "Acerca a nuevas personas y familias a nuestros programas y actividades."], ["Fondos", "Identifica fondos, convocatorias y oportunidades de colaboración."], ["Trabajo en red", "Fortalece el trabajo en red con la comunidad y organizaciones territoriales."], ["Seguimiento", "Realiza seguimiento de contactos, reuniones y propuestas."], ["Coordinación", "Trabaja coordinadamente con Dirección Nacional y las distintas áreas de la Fundación."]], "note": "Sin fronteras para la inclusión.", "action": {"label": "Quiero ser parte", "href": "mailto:relacionadorapublicacea@gmail.com?subject=Quiero%20ser%20parte%20de%20la%20red%20territorial%20de%20Fundaci%C3%B3n%20C.E.A.&body=Hola%2C%20me%20gustar%C3%ADa%20ser%20parte%20de%20la%20red%20territorial.%0A%0ANombre%3A%0ACiudad%20o%20pa%C3%ADs%3A%0ATel%C3%A9fono%3A"}}, "practica": {"title": "Rol de los y las alumnas en práctica", "icon": "cap", "color": "purple", "lead": "Abrimos nuestras puertas a estudiantes que quieran aprender y crecer con nosotros.", "items": [["Apoyo en actividades", ""], ["Observación y aprendizaje", ""], ["Colaboración en talleres", ""], ["Trabajo en equipo", ""], ["Registro y apoyo profesional", ""], ["Apoyo en proyectos", ""], ["Participación en la comunidad", ""], ["Desarrollo personal y profesional", ""]], "note": null, "action": {"label": "Postular", "href": "mailto:directoracarlafundacioncea@gmail.com?subject=Pr%C3%A1ctica%20profesional"}}}</script>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
@@ -1287,6 +1550,40 @@
     document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('visible'));
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Ventanas de detalle (servicios y formas de sumarse)
+    (function () {
+      const dlg = document.getElementById('info-dialog');
+      const data = JSON.parse(document.getElementById('info-data').textContent);
+      const $ = id => document.getElementById(id);
+      let opener = null;
+      function open(key, btn) {
+        const d = data[key]; if (!d) return;
+        opener = btn;
+        $('info-icon').className = 'icon bg-' + d.color;
+        $('info-icon').querySelector('use').setAttribute('href', '#' + d.icon);
+        $('info-title').textContent = d.title;
+        $('info-lead').textContent = d.lead;
+        const list = $('info-list'); list.innerHTML = '';
+        d.items.forEach(([t, desc]) => {
+          const li = document.createElement('li');
+          const b = document.createElement('strong'); b.textContent = t; li.appendChild(b);
+          if (desc) { const sp = document.createElement('span'); sp.textContent = desc; li.appendChild(sp); }
+          list.appendChild(li);
+        });
+        list.classList.toggle('compact', d.items.every(i => !i[1]));
+        $('info-note').hidden = !d.note; $('info-note').textContent = d.note || '';
+        const a = $('info-action'); a.textContent = d.action.label; a.href = d.action.href;
+        if (d.action.href.startsWith('http')) { a.target = '_blank'; a.rel = 'noopener'; } else { a.removeAttribute('target'); }
+        if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+        dlg.scrollTop = 0;
+      }
+      function close() { if (dlg.open) dlg.close(); }
+      document.querySelectorAll('[data-info]').forEach(b => b.addEventListener('click', () => open(b.dataset.info, b)));
+      dlg.querySelector('.dlg-close').addEventListener('click', close);
+      dlg.addEventListener('click', e => { if (e.target === dlg) close(); });
+      dlg.addEventListener('close', () => { if (opener) opener.focus(); });
+    })();
 
     // Panel de accesibilidad
     (function () {
