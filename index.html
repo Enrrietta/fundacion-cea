@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +11,57 @@
   <meta property="og:site_name" content="Fundación Familia C.E.A.">
   <meta property="og:title" content="Fundación Familia C.E.A. | Inclusión desde el corazón">
   <meta property="og:description" content="Más que terapias, creamos comunidad y oportunidades. Terapias, actividades gratuitas y apoyo a personas neurodivergentes y sus familias en La Serena.">
-  <meta property="og:image" content="https://enrrietta.github.io/fundacion-cea/img/nina.jpg">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath d='M50 25c-8-10-15-17-26-17C13 8 6 16 6 25s7 17 18 17c11 0 18-7 26-17zm0 0c8 10 15 17 26 17 11 0 18-8 18-17S87 8 76 8C65 8 58 15 50 25z' fill='none' stroke='%230E8A93' stroke-width='10'/%3E%3C/svg%3E">
+  <meta property="og:url" content="https://enrrietta.github.io/fundacion-cea/">
+  <meta property="og:image" content="https://enrrietta.github.io/fundacion-cea/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo de Fundación Familia C.E.A. junto a una niña sonriente">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://enrrietta.github.io/fundacion-cea/">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <script>
+    // Aplica las preferencias de accesibilidad antes de dibujar la página
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var p = JSON.parse(localStorage.getItem('cea-a11y') || '{}');
+        if (p.size) d.setAttribute('data-size', p.size);
+        ['hc', 'nm', 'legible', 'ul'].forEach(function (k) { if (p[k]) d.classList.add(k); });
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["NGO", "LocalBusiness"],
+    "name": "Fundación Familia C.E.A. Chile",
+    "alternateName": "Fundación Familia CEA",
+    "slogan": "Inclusión desde el corazón",
+    "description": "Organización sin fines de lucro que trabaja por la inclusión y calidad de vida de niños, niñas, adolescentes, jóvenes y adultos con o sin diagnóstico, junto a sus familias.",
+    "url": "https://enrrietta.github.io/fundacion-cea/",
+    "logo": "https://enrrietta.github.io/fundacion-cea/img/logo.png",
+    "image": "https://enrrietta.github.io/fundacion-cea/img/og-image.jpg",
+    "foundingDate": "2020-11-30",
+    "taxID": "65.198.253-7",
+    "telephone": "+56223583165",
+    "email": "directoracarlafundacioncea@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Los Carrera 134-136",
+      "addressLocality": "La Serena",
+      "addressRegion": "Coquimbo",
+      "addressCountry": "CL"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "09:00", "closes": "13:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "14:00", "closes": "19:00" }
+    ],
+    "sameAs": ["https://www.instagram.com/cea_oficial_ls/"],
+    "areaServed": "La Serena, Región de Coquimbo, Chile"
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
@@ -46,7 +95,7 @@
     html { scroll-behavior: smooth; scroll-padding-top: 92px; }
     body {
       margin: 0; font-family: "Nunito", system-ui, sans-serif; color: var(--ink);
-      background: #fff; line-height: 1.6; font-size: 17px; -webkit-font-smoothing: antialiased;
+      background: #fff; line-height: 1.6; font-size: 1.0625rem; -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
     img { max-width: 100%; display: block; }
@@ -90,7 +139,7 @@
     .btn svg { width: 20px; height: 20px; flex: none; }
 
     /* Marca */
-    .brand { display: inline-flex; align-items: center; text-decoration: none; line-height: 0; }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; line-height: 0; flex: none; }
     .brand img { height: 72px; width: auto; }
     .brand-card { background: #fff; border-radius: 20px; padding: 12px 18px; }
     .brand-card img { height: 78px; }
@@ -388,8 +437,8 @@
     }
     .toast.show { transform: translate(-50%, 0); visibility: visible; }
 
-    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
+    .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .js .reveal.visible { opacity: 1; transform: none; }
     .float { animation: float 5s ease-in-out infinite; }
     .float.d2 { animation-delay: -2.5s; }
     @keyframes float { 50% { transform: translateY(-10px); } }
@@ -401,7 +450,7 @@
       .steps { grid-template-columns: repeat(2, 1fr); }
       .act-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (max-width: 920px) {
+    @media (max-width: 1180px) {
       .menu-toggle { display: block; }
       .nav-links {
         position: absolute; top: 84px; left: 0; right: 0; flex-direction: column; align-items: stretch; background: #fff;
@@ -420,7 +469,7 @@
       .foot > div:first-child { grid-column: 1 / -1; }
     }
     @media (max-width: 640px) {
-      body { font-size: 16px; }
+      body { font-size: 1rem; }
       section { padding: 68px 0; }
       .wave { height: 50px; }
       footer { margin-top: 50px; }
@@ -428,7 +477,8 @@
       .grid-4, .steps, .facts-grid { grid-template-columns: 1fr; }
       .facts { padding-bottom: 50px; }
       .pro-grid, .act-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-      .pro, .act { padding: 12px; gap: 10px; font-size: .9rem; overflow-wrap: break-word; hyphens: auto; }
+      .pro, .act { padding: 14px; gap: 10px; font-size: .92rem; flex-direction: column; align-items: flex-start; min-width: 0; overflow-wrap: anywhere; hyphens: auto; }
+      .farm-photo::before { inset: 12px -8px -12px 8px; }
       .pro .icon, .act .icon { width: 38px; height: 38px; border-radius: 11px; }
       .pro .icon .ico, .act .icon .ico { width: 19px; height: 19px; }
       .card { padding: 24px; }
@@ -445,12 +495,114 @@
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
+      .js .reveal { opacity: 1; transform: none; transition: none; }
       .float, .wa-float::before { animation: none; }
+    }
+
+    /* Saltar al contenido */
+    .skip {
+      position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--ink); color: #fff;
+      padding: 10px 18px; border-radius: 10px; font-weight: 800; text-decoration: none;
+    }
+    .skip:focus { top: 12px; }
+
+    /* Preguntas frecuentes */
+    .faq { max-width: 860px; margin-inline: auto; display: grid; gap: 12px; }
+    .faq details {
+      background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-sm);
+      transition: border-color .15s ease;
+    }
+    .faq details[open] { border-color: var(--teal); }
+    .faq summary {
+      list-style: none; cursor: pointer; padding: 20px 60px 20px 24px; position: relative;
+      font-family: "Fredoka", sans-serif; font-weight: 600; font-size: 1.15rem; color: var(--ink);
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+      width: 30px; height: 30px; border-radius: 50%; background: var(--teal-soft); color: var(--teal-dark);
+      display: grid; place-items: center; font-size: 1.3rem; line-height: 1; transition: transform .2s ease;
+    }
+    .faq details[open] summary::after { content: "−"; background: var(--teal); color: #fff; }
+    .faq .answer { padding: 0 24px 22px; color: var(--muted); }
+    .faq .answer p:last-child, .faq .answer ul:last-child { margin-bottom: 0; }
+    .faq .answer ul { padding-left: 20px; margin: 0 0 1em; }
+    .faq .answer strong { color: var(--ink); }
+    .faq-cta { text-align: center; margin-top: 30px; color: var(--muted); }
+
+    /* Panel de accesibilidad */
+    .a11y-toggle {
+      position: fixed; left: 20px; bottom: 20px; z-index: 60; width: 56px; height: 56px; border-radius: 50%;
+      background: var(--purple); color: #fff; border: 3px solid #fff; cursor: pointer; display: grid; place-items: center;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .22); transition: transform .15s ease;
+    }
+    .a11y-toggle:hover { transform: scale(1.08); }
+    .a11y-toggle svg { width: 30px; height: 30px; }
+    .a11y-panel {
+      position: fixed; left: 20px; bottom: 88px; z-index: 61; width: min(340px, calc(100% - 40px));
+      background: #fff; border-radius: 22px; box-shadow: 0 24px 60px rgba(0, 0, 0, .25); padding: 22px;
+      border: 2px solid var(--purple-soft); max-height: calc(100vh - 110px); overflow-y: auto;
+    }
+    .a11y-panel[hidden] { display: none; }
+    .a11y-panel h2 { font-size: 1.3rem; color: var(--ink); margin: 0 0 4px; }
+    .a11y-panel > p { margin: 0 0 16px; color: var(--muted); font-size: .9rem; }
+    .a11y-close {
+      position: absolute; right: 14px; top: 14px; width: 36px; height: 36px; border-radius: 50%; border: 0;
+      background: var(--bg-alt); cursor: pointer; font-size: 1.3rem; color: var(--ink);
+    }
+    .a11y-group { margin-bottom: 14px; }
+    .a11y-label { display: block; font-weight: 800; font-size: .9rem; margin-bottom: 8px; }
+    .a11y-sizes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .a11y-sizes button, .a11y-switch {
+      font: 700 1rem "Nunito", sans-serif; color: var(--ink); background: var(--bg-alt); border: 2px solid var(--line);
+      border-radius: 12px; cursor: pointer;
+    }
+    .a11y-sizes button { padding: 8px 0; }
+    .a11y-sizes button[aria-pressed="true"], .a11y-switch[aria-checked="true"] { border-color: var(--purple); background: var(--purple-soft); color: var(--purple); }
+    .a11y-switch { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; padding: 12px 14px; margin-bottom: 8px; text-align: left; }
+    .a11y-switch .knob { width: 40px; height: 22px; border-radius: 999px; background: var(--line); position: relative; flex: none; transition: background .15s; }
+    .a11y-switch .knob::after { content: ""; position: absolute; left: 3px; top: 3px; width: 16px; height: 16px; border-radius: 50%; background: #fff; transition: transform .15s; }
+    .a11y-switch[aria-checked="true"] .knob { background: var(--purple); }
+    .a11y-switch[aria-checked="true"] .knob::after { transform: translateX(18px); }
+    .a11y-reset { width: 100%; margin-top: 6px; padding: 10px; border-radius: 12px; border: 0; background: none; color: var(--teal-dark); font: 800 .95rem "Nunito", sans-serif; text-decoration: underline; cursor: pointer; }
+
+    /* Preferencias: tamaño de letra */
+    html[data-size="1"] { font-size: 112.5%; }
+    html[data-size="2"] { font-size: 125%; }
+    /* Preferencias: alto contraste */
+    html.hc {
+      --teal: #05636A; --teal-dark: #034A50; --teal-deep: #02363A; --pink: #B0144A; --orange: #A84C00;
+      --purple: #5B2A9A; --green: #23702D; --blue: #14508A; --muted: #1F2A33; --line: #5C6B75; --bg-alt: #F4F4F4;
+    }
+    html.hc .hero { background: #fff; }
+    html.hc .fact span, html.hc .mv-card p { opacity: 1; }
+    html.hc .card, html.hc .pro, html.hc .act, html.hc .contact-item, html.hc .steps li, html.hc .faq details { border-width: 2px; border-color: var(--line); }
+    html.hc .btn-wa, html.hc .wa-float, html.hc .wa-float::before { background: #0B7A3B; }
+    html.hc .tint-orange { color: #8A3E00; }
+    html.hc .price-name small, html.hc .pro small, html.hc .tests td small { color: var(--ink); }
+    html.hc footer { color: #fff; }
+    /* Preferencias: sin animaciones */
+    html.nm { scroll-behavior: auto; }
+    html.nm *, html.nm *::before, html.nm *::after { animation: none !important; transition: none !important; }
+    html.nm .reveal { opacity: 1 !important; transform: none !important; }
+    /* Preferencias: letra más legible */
+    html.legible body, html.legible h1, html.legible h2, html.legible h3, html.legible h4,
+    html.legible .btn, html.legible .tagline, html.legible .collage .note, html.legible .motto p,
+    html.legible .thanks .script, html.legible .faq summary, html.legible .price-tag, html.legible .tests td:last-child {
+      font-family: "Atkinson Hyperlegible", Verdana, sans-serif !important; letter-spacing: .01em;
+    }
+    html.legible body { line-height: 1.75; }
+    /* Preferencias: subrayar enlaces */
+    html.ul a:not(.btn):not(.brand):not(.wa-float):not(.skip) { text-decoration: underline; text-underline-offset: 3px; }
+
+    @media (max-width: 640px) {
+      .a11y-toggle { left: 14px; bottom: 14px; width: 50px; height: 50px; }
+      .a11y-panel { left: 14px; bottom: 74px; }
     }
   </style>
 </head>
 <body>
+  <a class="skip" href="#main">Saltar al contenido</a>
 
   <!-- Íconos reutilizables -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -521,13 +673,14 @@
         <li><a href="#valores">Valores</a></li>
         <li><a href="#actividades">Actividades</a></li>
         <li><a href="#inscripcion">Inscripción</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
         <li><a href="#contacto">Contacto</a></li>
         <li><a class="btn btn-primary" href="#sumate">Súmate 💗</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <!-- PORTADA -->
     <section class="hero" id="inicio">
       <div class="container hero-grid">
@@ -854,8 +1007,126 @@
       </div>
     </section>
 
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="alt" id="preguntas">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow"><svg class="ico"><use href="#chat"/></svg> Resolvemos tus dudas</span>
+          <h2>Preguntas frecuentes</h2>
+          <p>Lo que más nos preguntan las familias.</p>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>¿Necesito un diagnóstico para recibir atención?</summary>
+            <div class="answer"><p><strong>No.</strong> Atendemos a personas <strong>con o sin diagnóstico</strong>. Si tienes un diagnóstico o antecedentes médicos, puedes presentarlos al momento de inscribirte.</p></div>
+          </details>
+          <details>
+            <summary>¿Qué edades atienden?</summary>
+            <div class="answer"><p>Acompañamos a las personas durante <strong>todo el ciclo vital</strong>: infancia, adolescencia, juventud y adultez, junto a sus familias. La atención de neurología es desde los 14 años en adelante.</p></div>
+          </details>
+          <details>
+            <summary>¿Cuánto cuesta pertenecer a la fundación?</summary>
+            <div class="answer"><ul><li>Inscripción: <strong>$10.000</strong> (único pago)</li><li>Cuota mensual: <strong>$5.000</strong></li><li>Terapia individual: <strong>$15.000</strong> por sesión</li><li>Neurología (desde los 14 años): <strong>$55.000</strong></li></ul><p>Las actividades comunitarias son <strong>gratuitas</strong>. <a href="#valores">Ver todos los valores</a>.</p></div>
+          </details>
+          <details>
+            <summary>¿Qué documentos necesito para inscribirme?</summary>
+            <div class="answer"><ul><li>Fotocopia de cédula de identidad por ambos lados (cuidador y usuario si corresponde)</li><li>Certificado de nacimiento</li><li>Diagnóstico o antecedentes médicos (si existen)</li><li>Registro Social de Hogares</li></ul><p>Luego se completa la ficha de ingreso y se firma el convenio de afiliación.</p></div>
+          </details>
+          <details>
+            <summary>¿Realizan evaluaciones de autismo?</summary>
+            <div class="answer"><p>Sí. Realizamos <strong>ADOS-2</strong> y su complemento <strong>ADI-R</strong>, además de evaluaciones psicométricas <strong>WISC-V</strong> (menores de 16 años) y <strong>WAIS-V</strong> (mayores de 16 años). <a href="#valores">Ver valores de las evaluaciones</a>.</p></div>
+          </details>
+          <details>
+            <summary>¿Qué actividades gratuitas ofrecen?</summary>
+            <div class="answer"><p>Paseos, salidas pedagógicas, Fiesta del Día de la Niñez, Fiesta de Navidad, talleres grupales y socioeducativos, charlas, apoyo social, clases de psicomotricidad, celebraciones típicas y escuelas de verano e invierno.</p></div>
+          </details>
+          <details>
+            <summary>¿Dónde están y cuál es el horario?</summary>
+            <div class="answer"><p>Estamos en <strong>Los Carrera #134–136, La Serena Centro</strong>. Atendemos de <strong>lunes a sábado</strong>, de 09:00 a 13:00 y de 14:00 a 19:00 hrs.</p></div>
+          </details>
+          <details>
+            <summary>¿Cómo puedo ayudar a la fundación?</summary>
+            <div class="answer"><p>Puedes <a href="#cuenta">hacer una donación</a> por transferencia, sumarte como voluntario/a, realizar tu práctica profesional con nosotros o, si representas a una empresa o institución, proponernos una alianza.</p></div>
+          </details>
+        </div>
+        <p class="faq-cta reveal">¿Tienes otra pregunta? <a href="https://wa.me/56931803017" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>.</p>
+      </div>
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Necesito un diagnóstico para recibir atención?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Atendemos a personas con o sin diagnóstico. Si tienes un diagnóstico o antecedentes médicos, puedes presentarlos al momento de inscribirte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué edades atienden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Acompañamos a las personas durante todo el ciclo vital: infancia, adolescencia, juventud y adultez, junto a sus familias. La atención de neurología es desde los 14 años en adelante."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta pertenecer a la fundación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inscripción $10.000 (único pago), cuota mensual $5.000, terapia individual $15.000 por sesión y neurología (desde los 14 años) $55.000. Las actividades comunitarias son gratuitas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué documentos necesito para inscribirme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fotocopia de cédula de identidad por ambos lados (cuidador y usuario si corresponde), certificado de nacimiento, diagnóstico o antecedentes médicos (si existen) y Registro Social de Hogares. Luego se completa la ficha de ingreso y se firma el convenio de afiliación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Realizan evaluaciones de autismo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Realizamos ADOS-2 y su complemento ADI-R, además de evaluaciones psicométricas WISC-V (menores de 16 años) y WAIS-V (mayores de 16 años)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué actividades gratuitas ofrecen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paseos, salidas pedagógicas, Fiesta del Día de la Niñez, Fiesta de Navidad, talleres grupales y socioeducativos, charlas, apoyo social, clases de psicomotricidad, celebraciones típicas y escuelas de verano e invierno."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde están y cuál es el horario?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estamos en Los Carrera #134–136, La Serena Centro. Atendemos de lunes a sábado, de 09:00 a 13:00 y de 14:00 a 19:00 hrs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo puedo ayudar a la fundación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puedes hacer una donación por transferencia, sumarte como voluntario/a, realizar tu práctica profesional con nosotros o, si representas a una empresa o institución, proponernos una alianza."
+      }
+    }
+  ]
+}
+      </script>
+    </section>
+
     <!-- CONTACTO -->
-    <section class="alt" id="contacto">
+    <section id="contacto">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow"><svg class="ico"><use href="#pin"/></svg> Contáctanos</span>
@@ -921,6 +1192,7 @@
             <li><a href="#actividades">Actividades</a></li>
             <li><a href="#inscripcion">Inscripción</a></li>
             <li><a href="#sumate">Donar</a></li>
+            <li><a href="#preguntas">Preguntas frecuentes</a></li>
           </ul>
         </div>
         <div>
@@ -942,6 +1214,27 @@
   <a class="wa-float" href="https://wa.me/56931803017" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
     <svg aria-hidden="true"><use href="#wa"/></svg>
   </a>
+  <button class="a11y-toggle" type="button" aria-expanded="false" aria-controls="a11y-panel" aria-label="Opciones de accesibilidad" title="Accesibilidad">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="2"/><path d="M4 8.5l8 1.5 8-1.5M12 10v4.5M12 14.5l-3.5 6.5M12 14.5l3.5 6.5"/></svg>
+  </button>
+  <div class="a11y-panel" id="a11y-panel" role="dialog" aria-labelledby="a11y-title" hidden>
+    <button class="a11y-close" type="button" aria-label="Cerrar">×</button>
+    <h2 id="a11y-title">Accesibilidad</h2>
+    <p>Ajusta la página a tu comodidad. Recordaremos tu elección.</p>
+    <div class="a11y-group">
+      <span class="a11y-label" id="a11y-size-label">Tamaño de letra</span>
+      <div class="a11y-sizes" role="group" aria-labelledby="a11y-size-label">
+        <button type="button" data-size="0" aria-pressed="true">A</button>
+        <button type="button" data-size="1" aria-pressed="false" style="font-size:1.15rem">A+</button>
+        <button type="button" data-size="2" aria-pressed="false" style="font-size:1.3rem">A++</button>
+      </div>
+    </div>
+    <button class="a11y-switch" type="button" role="switch" aria-checked="false" data-pref="hc">Alto contraste <span class="knob" aria-hidden="true"></span></button>
+    <button class="a11y-switch" type="button" role="switch" aria-checked="false" data-pref="nm">Detener animaciones <span class="knob" aria-hidden="true"></span></button>
+    <button class="a11y-switch" type="button" role="switch" aria-checked="false" data-pref="legible">Letra más legible <span class="knob" aria-hidden="true"></span></button>
+    <button class="a11y-switch" type="button" role="switch" aria-checked="false" data-pref="ul">Subrayar enlaces <span class="knob" aria-hidden="true"></span></button>
+    <button class="a11y-reset" type="button">Restablecer</button>
+  </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
@@ -994,6 +1287,52 @@
     document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('visible'));
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Panel de accesibilidad
+    (function () {
+      const root = document.documentElement;
+      const btn = document.querySelector('.a11y-toggle');
+      const panel = document.getElementById('a11y-panel');
+      const sizeBtns = [...panel.querySelectorAll('[data-size]')];
+      const switches = [...panel.querySelectorAll('[data-pref]')];
+      let prefs = {};
+      try { prefs = JSON.parse(localStorage.getItem('cea-a11y') || '{}'); } catch (e) {}
+
+      function loadLegibleFont() {
+        if (document.getElementById('font-legible')) return;
+        const l = document.createElement('link');
+        l.id = 'font-legible'; l.rel = 'stylesheet';
+        l.href = 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap';
+        document.head.appendChild(l);
+      }
+      function apply() {
+        if (prefs.size) root.setAttribute('data-size', prefs.size); else root.removeAttribute('data-size');
+        sizeBtns.forEach(b => b.setAttribute('aria-pressed', String((prefs.size || '0') === b.dataset.size)));
+        switches.forEach(s => {
+          const on = !!prefs[s.dataset.pref];
+          root.classList.toggle(s.dataset.pref, on);
+          s.setAttribute('aria-checked', String(on));
+        });
+        if (prefs.nm) document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+        if (prefs.legible) loadLegibleFont();
+        try { localStorage.setItem('cea-a11y', JSON.stringify(prefs)); } catch (e) {}
+      }
+      function setOpen(open) {
+        panel.hidden = !open;
+        btn.setAttribute('aria-expanded', String(open));
+        if (open) panel.querySelector('button[data-size]').focus(); else btn.focus();
+      }
+      btn.addEventListener('click', () => setOpen(panel.hidden));
+      panel.querySelector('.a11y-close').addEventListener('click', () => setOpen(false));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) setOpen(false); });
+      document.addEventListener('click', e => {
+        if (!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) { panel.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+      });
+      sizeBtns.forEach(b => b.addEventListener('click', () => { prefs.size = b.dataset.size === '0' ? '' : b.dataset.size; apply(); }));
+      switches.forEach(s => s.addEventListener('click', () => { prefs[s.dataset.pref] = !prefs[s.dataset.pref]; apply(); }));
+      panel.querySelector('.a11y-reset').addEventListener('click', () => { prefs = {}; apply(); });
+      apply();
+    })();
   </script>
 </body>
 </html>
